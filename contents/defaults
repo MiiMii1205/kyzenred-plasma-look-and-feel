@@ -2,7 +2,7 @@
 cursorTheme=breeze_cursors
 
 [kdeglobals][General]
-ColorScheme=Kyrenred
+ColorScheme=Kyzenred
 
 [kdeglobals][Icons]
 Theme=Materia-Manjaro-Dark
@@ -18,7 +18,7 @@ LayoutName=org.kde.breeze.desktop
 
 [kwinrc][org.kde.kdecoration2]
 library=org.kde.kwin.aurorae
-theme=__aurorae__svg__Kyrenred
+theme=__aurorae__svg__Kyzenred
 
 [plasmarc][Theme]
-name=Kyrenred
+name=Kyzenred
