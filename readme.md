@@ -1,6 +1,8 @@
 # Kyzenred
 A full KDE theme based on gamer aesthetics and modern minimalism (Plasma look-and-feel component)
 
+![Kyzenred Preview](https://github.com/MiiMii1205/kyzenred-plasma-look-and-feel/blob/master/contents/previews/fullscreenpreview.jpg?raw=true)
+
 ## Dependencies
 - KDE >= 5
 
