@@ -9,7 +9,10 @@
    </cc:Work>
   </rdf:RDF>
  </metadata>
- <style>{{stylesheet}}</style>
+   <style
+     id="current-color-scheme" >
+      .ColorScheme-Text{color:rgb(255,248,247);} .ColorScheme-Background{color:rgb(3,27,22);} .ColorScheme-Highlight{color:rgb(229,27,66);} .ColorScheme-ViewText{color:rgb(250,233,232);} .ColorScheme-ViewBackground{color:rgb(1,13,10);} .ColorScheme-ViewHover{color:rgb(148,34,40);} .ColorScheme-ViewFocus{color:rgb(201,30,60);} .ColorScheme-ButtonText{color:rgb(233,245,243);} .ColorScheme-ButtonBackground{color:rgb(28,4,8);} .ColorScheme-ButtonHover{color:rgb(148,34,40);} .ColorScheme-ButtonFocus{color:rgb(201,30,60);}
+  </style>
  <g id="button-normal-topright" transform="matrix(19.693 0 0 19.693 -4480.1 -4962.6)">
   <path class="ColorScheme-ButtonFocus" d="m244.17 258.92 2.8279 2.8272 7.3e-4 -9.7483-9.7497 3e-5 2.8312 2.8312h4.0899z" style="fill:currentColor"/>
  </g>

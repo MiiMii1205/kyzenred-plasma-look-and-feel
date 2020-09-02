@@ -184,7 +184,7 @@ function makeKDERequest() {
         .ColorScheme-ButtonFocus{color:${getKDEColor("Button", "DecorationFocus", ini)};}
         `
         getFile("./images/kyzen-bracket.svg", (svg) => {
-            bottom_left_bracket.source = top_right_bracket.source = `data:image/svg+xml,${encodeSVG(svg.replace("{{stylesheet}}", stylesheet))}`
+            bottom_left_bracket.source = top_right_bracket.source = `data:image/svg+xml,${encodeSVG(svg.replace(/(<style(\s|\S)*?id="current-color-scheme"(\s|\S)*?<\/style>)/g, `<style id="current-color-scheme">${stylesheet}</style>`))}`
         })
     })
 }
