@@ -16,4 +16,4 @@ X-KDE-PluginInfo-Website=https://github.com/MiiMii1205/kyzenred-plasma-look-and-
 X-KDE-fallbackPackage=org.kde.breeze.desktop
 X-Plasma-MainScript=defaults
 X-Plasma-API=5.0
-X-KPackage-Dependencies=kns://colorschemes.knsrc/api.kde-look.org/1306504,kns://plasma-themes.knsrc/api.kde-look.org/1306505,kns://aurorae.knsrc/api.kde-look.org/1309265,kns://icons.knsrc/api.kde-look.org/1313094,kns://icons.knsrc/api.kde-look.org/1328981,kns://wallpaper.knsrc/api.kde-look.org/1296893,kns://wallpaper.knsrc/api.kde-look.org/1319754
+X-KPackage-Dependencies=kns://colorschemes.knsrc/api.kde-look.org/1306504,kns://plasma-themes.knsrc/api.kde-look.org/1306505,kns://aurorae.knsrc/api.kde-look.org/1309265

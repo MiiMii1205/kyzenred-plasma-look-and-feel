@@ -1,20 +1,17 @@
-[kcminputrc][Mouse]
-cursorTheme=breeze_cursors
-
 [kdeglobals][General]
 ColorScheme=Kyzenred
 
-[kdeglobals][Icons]
-Theme=Materia-Manjaro-Dark
-
 [kdeglobals][KDE]
-widgetStyle=breeze
+widgetStyle=kvantum-dark
 
 [kwinrc][DesktopSwitcher]
-LayoutName=org.kde.breeze.desktop
+LayoutName=Kyzenred
 
 [kwinrc][WindowSwitcher]
-LayoutName=org.kde.breeze.desktop
+LayoutName=Kyzenred
+
+[kwinrc][Plugins]
+blurEnabled=false
 
 [kwinrc][org.kde.kdecoration2]
 library=org.kde.kwin.aurorae
