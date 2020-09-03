@@ -38,4 +38,4 @@ So, to put it simply, we:
 5. Parse the whole SVG file into a `data:` URL;
 6. Give the URL to [QML](https://doc.qt.io/qt-5/qmlreference.html).
 
-After this is done, the whole splash screen is now fully recolored and ready to play|
+After this is done, the whole splash screen is now fully recolored and ready to play!
