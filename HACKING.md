@@ -6,36 +6,17 @@ first, you need to know that, like many KDE splash screens, Kyzenred uses a [QML
 
 [QML](https://doc.qt.io/qt-5/qmlreference.html) is a special markup language used by Qt to build a node graph (or a whole splash screen if you want)
 
-[QML](https://doc.qt.io/qt-5/qmlreference.html) also support JavaScript, which is used by Kyzenred to fetch the current color scheme and to dynamically recolor SVGs.
+[QML](https://doc.qt.io/qt-5/qmlreference.html) also support JavaScript, which is used by Kyzenred to fetch some of your systems information, namely the current hostname.
 
-Second, you need to know that Kvantum is a pure SVG engine. This means that if you want to change things you'll need to know how SVGs works, along with good HTML and CSS knowledge.
+Second, you need to know that QML uses something similar to SVG's paths to draw complex shapes with it's special [Shape](https://doc.qt.io/qt-5/qml-qtquick-shapes-shape.html) item. [For more details, check this out](https://doc.qt.io/qt-5/qml-qtquick-pathsvg.html)
 
 Thankfully, there's [w3school](https://www.w3schools.com/graphics/svg_intro.asp). With their little SVG reference you'll be ready in no time to edit the theme!
 
 ## Recoloring
-Kyzenred is dynamically colored theme. This means that its components are dynamically recolored based on the current color scheme.
+Kyzenred is a dynamically colored theme. This means that its components are dynamically recolored based on the current color scheme.
 
-Because [QML](https://doc.qt.io/qt-5/qmlreference.html) by itself barely has support for full system access, we need to use a finicky hack to make it work.
+Because [QML](https://doc.qt.io/qt-5/qmlreference.html) by itself barely has support for full system access, we need to import KDE's own library too.
 
-This is why the splash screen's location is critical. We are essentially using a buch of relative path to fetch the `~/.config/kdeglobals` file and read the current color scheme form it.
+[KDE's QtQuick's library](https://api.kde.org/frameworks/plasma-framework/html/index.html) gives us a whole lot of information on the current KDE color scheme and theme. From there, it's easy to assign different colors to any component we like. 
 
-To achieve this, we use a simple [XMLHttpRequest](https://www.w3schools.com/js/js_ajax_http.asp) to fetch the `~/.config/kdeglobals`.
-We then generate a stylesheet from it and also change any color we want from the splash screen.
-
-But then, we're faced with another problem: [QML](https://doc.qt.io/qt-5/qmlreference.html) only supports SVG files trough their [`Image` QML item](https://doc.qt.io/qt-5/qml-qtquick-image.html). This effectively means that as soon as [QML](https://doc.qt.io/qt-5/qmlreference.html) receives the SVG file it immediately renders it into a raster image. This is bad: we need to load an SVG file and change the whole color scheme *BEFORE* rendering.
-
-The solution? using a `data:` URL.
-
-With a special encoder, we can set the image source of an [`Image` QML item](https://doc.qt.io/qt-5/qml-qtquick-image.html) to an actual SVG rather than to an SVG file path. We can then replace anything we want in it and parse it into pure data which is then sent to [QML](https://doc.qt.io/qt-5/qmlreference.html) who immediately renders it.
-
-So, to put it simply, we:
-
-1. Fetch the current color scheme;
-2. Assign the fetched colors to some [QML](https://doc.qt.io/qt-5/qmlreference.html) items;
-2. Generate the special `<style>` tag;
-3. Fetch the needed SVG file;
-4. Insert the generated `<style>` tag;
-5. Parse the whole SVG file into a `data:` URL;
-6. Give the URL to [QML](https://doc.qt.io/qt-5/qmlreference.html).
-
-After this is done, the whole splash screen is now fully recolored and ready to play|
+Check out [KDE's QtQuick API](https://api.kde.org/frameworks/plasma-framework/html/index.html) for more details.
